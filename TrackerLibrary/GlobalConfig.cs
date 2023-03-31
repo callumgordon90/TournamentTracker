@@ -26,6 +26,8 @@ namespace TrackerLibrary
             {
                 //TODO - Create the Text Connection
                 TextConnection text = new TextConnection();
+                Connections.Add(text);
+
             }
         }
     }
