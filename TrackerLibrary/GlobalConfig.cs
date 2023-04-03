@@ -32,3 +32,4 @@ namespace TrackerLibrary
         }
     }
 }
+// above there are two options for database connection: textfiles and SQL
