@@ -37,6 +37,8 @@ namespace TrackerLibrary
         {
             return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
+        //Now, whenever anyone types in GlobalConfig.CNNString and passes in 'tournaments' as the parameter,
+        //They will get the string above returned back to them
     }
 }
 // above there are two options for database connection: textfiles and SQL
