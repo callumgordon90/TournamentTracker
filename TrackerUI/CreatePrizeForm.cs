@@ -34,6 +34,8 @@ namespace TrackerUI
 
         private void createPrizeButton_Click(object sender, EventArgs e)
         {
+
+            //This condition is calling the empty constructor in the PrizeModel document
             if (ValidateForm())
             {
                 PrizeModel model = new PrizeModel(
@@ -42,6 +44,7 @@ namespace TrackerUI
                     prizeAmountValue.Text,
                     prizePercentageValue.Text);
 
+                //This is how we save our model after creating it:
                 foreach (IDataConnection db in GlobalConfig.Connections)
                 {
                     db.CreatePrize(model);

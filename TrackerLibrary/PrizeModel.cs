@@ -41,8 +41,12 @@ namespace TrackerLibrary
             
         }
 
+        /// <summary>
+        /// This method allows us to parse the information from the create prize form camps
+        /// </summary>
         public PrizeModel(string placeName, string placeNumber, string prizeAmount, string prizePercentage)
         {
+
             PlaceName = placeName;
 
             int placeNumberValue = 0;
