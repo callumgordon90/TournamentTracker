@@ -50,6 +50,10 @@ namespace TrackerUI
                     db.CreatePrize(model);
                 }
 
+                placeNameValue.Text = "";
+                placeNumberValue.Text = "";
+                prizeAmountValue.Text = "0";
+                prizePercentageValue.Text = "0";
             }
             else
             {
@@ -101,6 +105,11 @@ namespace TrackerUI
 
 
             return output;
+
+        }
+
+        private void prizePercentageValue_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
