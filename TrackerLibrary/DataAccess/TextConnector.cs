@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TrackerLibrary.DataAccess
 {
-    public class TextConnection : IDataConnection
+    public class TextConnector : IDataConnection
     {
         // TODO - Wire up the CreatePrize for the text files
         public PrizeModel CreatePrize(PrizeModel model)
