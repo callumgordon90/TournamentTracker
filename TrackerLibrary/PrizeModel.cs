@@ -33,6 +33,9 @@ namespace TrackerLibrary
         /// </summary>
         public double PrizePercentage { get; set; }
 
+        /// <summary>
+        /// This is an empty constructor (at the moment)
+        /// </summary>
         public PrizeModel()
         {
             
