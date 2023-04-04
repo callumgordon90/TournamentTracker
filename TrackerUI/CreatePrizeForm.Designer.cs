@@ -114,6 +114,7 @@
             prizeAmountValue.Name = "prizeAmountValue";
             prizeAmountValue.Size = new Size(148, 31);
             prizeAmountValue.TabIndex = 30;
+            prizeAmountValue.Text = "0";
             // 
             // prizeAmountLabel
             // 

@@ -51,7 +51,7 @@ namespace TrackerUI
                 }
 
             }
-            else 
+            else
             {
                 MessageBox.Show("This form has invalid information. Please check it and try again.");
             }
@@ -91,7 +91,7 @@ namespace TrackerUI
 
             if (prizeAmount <= 0 && prizePercentage <= 0)
             {
-                output = false;   
+                output = false;
             }
 
             if (prizePercentage < 0 || prizePercentage > 100)
