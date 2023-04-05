@@ -14,6 +14,8 @@ namespace TrackerLibrary
     {
         public static IDataConnection Connection { get; private set; }
 
+
+        //"Void" is used as the return type of a method in order to specify that the method doesn't return a value.
         public static void InitializeConnections(DatabaseType db)
         {
             if (db == DatabaseType.Sql)
