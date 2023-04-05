@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using TrackerLibrary.DataAccess.TextHelpers;
 using TrackerLibrary.Models;
 
 
@@ -34,6 +35,7 @@ namespace TrackerLibrary.DataAccess
                 p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
                 connection.Execute("dbo.spPrizez_Insert", p, commandType: CommandType.StoredProcedure);
+
 
                 model.Id = p.Get<int>("@id");
 
