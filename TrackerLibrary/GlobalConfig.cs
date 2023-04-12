@@ -23,7 +23,7 @@ namespace TrackerLibrary
                 //TODO - Set up the SQL Connector properly
                 SqlConnector sql = new SqlConnector();
                 Connection = sql;
-
+                 
             }
             else if (db == DatabaseType.TextFile)
             {
