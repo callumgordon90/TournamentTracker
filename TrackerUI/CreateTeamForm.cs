@@ -49,7 +49,7 @@ namespace TrackerUI
         {
 
         }
-
+         
         private void createTournamentButton_Click(object sender, EventArgs e)
         {
 
@@ -57,6 +57,30 @@ namespace TrackerUI
 
         private void createMemberButton_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private bool ValidateForm()
+        {
+            if (firstNameValue.Text.Length == 0)
+            {
+                return false;
+            }
+
+            if (lastNameValue.Text.Length == 0)
+            {
+                return false;
+            }
+
+            if (emailValue.Text.Length == 0)
+            {
+                return false;
+            }
+
+            if (cellphoneValue.Text.Length == 0)
+            {
+                return false;
+            }
 
         }
     }
