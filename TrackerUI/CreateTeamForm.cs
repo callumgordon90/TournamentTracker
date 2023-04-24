@@ -68,9 +68,14 @@ namespace TrackerUI
                 p.EmailAddress = emailValue.Text;
                 p.CellphoneNumber = cellphoneValue.Text;
 
-                //now that we have our model we need to send it to our database or text file
+                //Now that we have our model we need to send it to our database or text file
                 GlobalConfig.Connection.CreatePerson(p);
 
+                //Now finally we reset the values:
+                firstNameValue.Text = "";
+                lastNameValue.Text = "";
+                emailValue.Text = "";
+                cellphoneValue.Text = "";
             }
             else
             {
