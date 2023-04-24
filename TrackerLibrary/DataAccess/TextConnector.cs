@@ -13,6 +13,12 @@ namespace TrackerLibrary.DataAccess
         private const string PrizesFile = "PrizeModels.csv";
 
 
+        public PersonModel CreatePerson(PersonModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+
         // TODO - Wire up the CreatePrize for the text files
         //The following are helper methods which will allow us to talk to the text files:
         public PrizeModel CreatePrize(PrizeModel model)
