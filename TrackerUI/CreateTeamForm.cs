@@ -57,7 +57,14 @@ namespace TrackerUI
 
         private void createMemberButton_Click(object sender, EventArgs e)
         {
+            if (ValidateForm())
+            {
 
+            }
+            else
+            {
+                MessageBox.Show("You need to fill in all of the fields. ");
+            }
         }
 
         private bool ValidateForm()
