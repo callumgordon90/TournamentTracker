@@ -23,6 +23,7 @@ namespace TrackerLibrary.DataAccess
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournaments")))
             {
+                //Here we create our dynamic parametre list
                 var p = new DynamicParameters();
                 p.Add("@FirstName", model.FirstName);
                 p.Add("@LastName", model.LastName);
