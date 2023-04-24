@@ -49,6 +49,7 @@ namespace TrackerUI
                 //This is how we save our model after creating it:
                 GlobalConfig.Connection.CreatePrize(model);
 
+                //..Then we clear out the form after saving: 
                 placeNameValue.Text = "";
                 placeNumberValue.Text = "";
                 prizeAmountValue.Text = "0";
