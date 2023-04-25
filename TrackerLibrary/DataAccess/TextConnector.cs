@@ -66,5 +66,10 @@ namespace TrackerLibrary.DataAccess
 
             return model;
         }
+        //here we can implement an interface(?):
+        public List<PersonModel> GetPersons_All() 
+        {
+            throw new NotImplementedException();
+        }
     }
 }
