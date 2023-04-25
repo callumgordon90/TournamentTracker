@@ -15,6 +15,9 @@ namespace TrackerLibrary.DataAccess
 
         public PersonModel CreatePerson(PersonModel model)
         {
+            //this line takes our file name, converts it to full path using app.config, loads the file if it exists..
+            //(..and if it doesn't exist returns back an empty list, takes the list and converts it to a list of PersonModel
+            //If the list is empty, we get an empty list of PersonModel, otherwise we get a list of all the people in our CSV file
             List<PrizeModel> prizes = PrizesFile.FullFilePath().LoadFile().ConvertToPrizeModels();
         }
 
