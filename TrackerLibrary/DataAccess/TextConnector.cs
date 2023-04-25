@@ -11,11 +11,11 @@ namespace TrackerLibrary.DataAccess
     {
         //This is the location where we are going to store our prizes
         private const string PrizesFile = "PrizeModels.csv";
-
+        private const string PeopleFile = "PersonModels.csv";
 
         public PersonModel CreatePerson(PersonModel model)
         {
-            throw new NotImplementedException();
+            List<PrizeModel> prizes = PrizesFile.FullFilePath().LoadFile().ConvertToPrizeModels();
         }
 
 
