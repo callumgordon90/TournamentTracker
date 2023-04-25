@@ -14,9 +14,21 @@ namespace TrackerUI
 {
     public partial class CreateTeamForm : Form
     {
+        private List<PersonModel> availableTeamMembers = new List<PersonModel>();   
+        private List<PersonModel> selectedTeamMembers = new List<PersonModel>();
+
+
+
         public CreateTeamForm()
         {
             InitializeComponent();
+        }
+
+        // Now we create a method which wires the two lists up:
+        private void WireUpLists() 
+        {
+            selectTeamMemberDropdown.DataSource = availableTeamMembers;
+            selectTeamMemberDropdown.DisplayMember = "FullName";
         }
 
         private void createTournamentLabel_Click(object sender, EventArgs e)
