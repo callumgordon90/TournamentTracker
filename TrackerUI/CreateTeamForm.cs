@@ -18,10 +18,24 @@ namespace TrackerUI
         private List<PersonModel> selectedTeamMembers = new List<PersonModel>();
 
 
-
+        //this is a constructor which calls methods
         public CreateTeamForm()
         {
             InitializeComponent();
+
+            CreateSampleData();
+
+            WireUpLists();
+        }
+
+        private void CreateSampleData()
+        {
+            //this is sample data, only displayiong the first and last name:
+            availableTeamMembers.Add(new PersonModel { FirstName = "Callum", LastName = "Gordon" });
+            availableTeamMembers.Add(new PersonModel { FirstName = "John", LastName = "Smith" });
+
+            selectedTeamMembers.Add(new PersonModel { FirstName = "Jim", LastName = "Brown" });
+            selectedTeamMembers.Add(new PersonModel { FirstName = "Edward", LastName = "Baker" });
         }
 
         // Now we create a method which wires the two lists up:
@@ -29,6 +43,9 @@ namespace TrackerUI
         {
             selectTeamMemberDropdown.DataSource = availableTeamMembers;
             selectTeamMemberDropdown.DisplayMember = "FullName";
+
+            teamMembersListBox.DataSource = selectedTeamMembers;
+            teamMembersListBox.DisplayMember = "Full Name";
         }
 
         private void createTournamentLabel_Click(object sender, EventArgs e)
