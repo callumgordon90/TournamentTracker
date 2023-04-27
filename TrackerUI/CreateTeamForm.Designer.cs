@@ -251,7 +251,7 @@
             removeSelectedMember.TabIndex = 22;
             removeSelectedMember.Text = "Remove Selected";
             removeSelectedMember.UseVisualStyleBackColor = true;
-            removeSelectedMember.Click += deleteSelectedMember_Click;
+            removeSelectedMember.Click += removeSelectedMember_Click;
             // 
             // createTeamButton
             // 

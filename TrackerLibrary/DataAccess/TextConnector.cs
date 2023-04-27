@@ -67,9 +67,9 @@ namespace TrackerLibrary.DataAccess
             return model;
         }
         //here we can implement an interface(?):
-        public List<PersonModel> GetPersons_All() 
+        public List<PersonModel> GetPerson_All() 
         {
-            throw new NotImplementedException();
+            return PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();
         }
     }
 }

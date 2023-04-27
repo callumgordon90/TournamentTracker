@@ -110,7 +110,11 @@ namespace TrackerUI
                 p.CellphoneNumber = cellphoneValue.Text;
 
                 //Now that we have our model we need to send it to our database or text file
-                GlobalConfig.Connection.CreatePerson(p);
+                p = GlobalConfig.Connection.CreatePerson(p);
+
+                selectedTeamMembers.Add(p);
+
+                WireUpLists();
 
                 //Now finally we reset the values:
                 firstNameValue.Text = "";
