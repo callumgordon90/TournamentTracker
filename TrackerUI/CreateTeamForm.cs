@@ -45,7 +45,7 @@ namespace TrackerUI
         }
 
         // Now we create a method which wires the two lists up:
-        private void WireUpLists() 
+        private void WireUpLists()
         {
             selectTeamMemberDropdown.DataSource = null;
 
@@ -92,7 +92,7 @@ namespace TrackerUI
         {
 
         }
-         
+
         private void createTournamentButton_Click(object sender, EventArgs e)
         {
 
@@ -151,7 +151,7 @@ namespace TrackerUI
 
         private void addMemberButton_Click(object sender, EventArgs e)
         {
-            
+
             PersonModel p = (PersonModel)selectTeamMemberDropDown.SelectedItem;
 
             //Here we are moving a team member from one place to another
@@ -161,8 +161,18 @@ namespace TrackerUI
             //WireUpLists();
             selectTeamMemberDropdown.Refresh();
             teamMembersListBox.Refresh();
-             
+
         }
 
+        private void removeSelectedMember_Click(object sender, EventArgs e)
+        {
+            PersonModel p = (PersonModel)teamMembersListBox.SelectedItem;
+
+            selectedTeamMembers.Remove(p);
+            availableTeamMembers.Add(p);
+
+            WireUpLists();
+
+        }
     }
 }
