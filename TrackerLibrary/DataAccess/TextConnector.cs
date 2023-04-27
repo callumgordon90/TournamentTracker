@@ -12,6 +12,7 @@ namespace TrackerLibrary.DataAccess
         //This is the location where we are going to store our prizes
         private const string PrizesFile = "PrizeModels.csv";
         private const string PeopleFile = "PersonModels.csv";
+        private const string TeamFile = "TeamModels.csv";
 
         public PersonModel CreatePerson(PersonModel model)
         {
@@ -77,5 +78,11 @@ namespace TrackerLibrary.DataAccess
         {
             return PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();
         }
+
+        public TeamModel CreateTeam(TeamModel model)
+        {
+        
+        }
+
     }
 }
