@@ -154,6 +154,7 @@ namespace TrackerUI
 
             PersonModel p = (PersonModel)selectTeamMemberDropDown.SelectedItem;
 
+        if (p == null) { 
             //Here we are moving a team member from one place to another
             availableTeamMembers.Remove(p);
             selectedTeamMembers.Add(p);
@@ -161,17 +162,19 @@ namespace TrackerUI
             //WireUpLists();
             selectTeamMemberDropdown.Refresh();
             teamMembersListBox.Refresh();
-
+            } 
         }
 
         private void removeSelectedMember_Click(object sender, EventArgs e)
         {
             PersonModel p = (PersonModel)teamMembersListBox.SelectedItem;
 
+        if ( p ! = null) { 
             selectedTeamMembers.Remove(p);
             availableTeamMembers.Add(p);
 
             WireUpLists();
+            }
 
         }
     }
