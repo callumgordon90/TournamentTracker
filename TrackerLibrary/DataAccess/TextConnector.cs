@@ -19,12 +19,12 @@ namespace TrackerLibrary.DataAccess
             //this line takes our file name, converts it to full path using app.config, loads the file if it exists..
             //(..and if it doesn't exist returns back an empty list, takes the list and converts it to a list of PersonModel
             //If the list is empty, we get an empty list of PersonModel, otherwise we get a list of all the people in our CSV file
-            List<PrizeModel> prizes = PrizesFile.FullFilePath().LoadFile().ConvertToPrizeModels();
+            List<PersonModel> prizes = PrizesFile.FullFilePath().LoadFile().ConvertToPrizeModels();
 
             //next we need to find the max id
             int currentId = 1;
 
-            if (PeopleFile.Count > 0)
+            if (people.Count > 0)
             {
                 //order people list descending by id, take the first one, take its id, add 1 to it, and thats the value of the current id
                 currentId = people.OrderByDescending(x => x.Id).First().Id + 1;
@@ -81,8 +81,25 @@ namespace TrackerLibrary.DataAccess
 
         public TeamModel CreateTeam(TeamModel model)
         {
-        
-        }
+            List<TeamModel> teams = TeamFile.FullFilePath().LoadFile().ConvertToTeamModels(PeopleFile);
+
+            // Find the max ID
+            int currentId = 1;
+
+            if (teams.Count > 0)
+            {
+                currentId = teams.OrderByDescending(x => x.Id).First().Id + 1;
+            }
+
+            model.Id = currentId;
+
+            teams.Add(model);
+
+            teams.SaveToTeamFile(TeamFile);
+
+            return model;
+
+        } 
 
     }
 }
